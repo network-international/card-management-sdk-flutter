@@ -1,0 +1,35 @@
+PODS:
+  - card_management_sdk (1.0.0):
+    - Flutter
+    - NICardManagementSDK (= 2.1.4)
+  - Flutter (1.0.0)
+  - integration_test (0.0.1):
+    - Flutter
+  - NICardManagementSDK (2.1.4)
+
+DEPENDENCIES:
+  - card_management_sdk (from `.symlinks/plugins/card_management_sdk/ios`)
+  - Flutter (from `Flutter`)
+  - integration_test (from `.symlinks/plugins/integration_test/ios`)
+
+SPEC REPOS:
+  trunk:
+    - NICardManagementSDK
+
+EXTERNAL SOURCES:
+  card_management_sdk:
+    :path: ".symlinks/plugins/card_management_sdk/ios"
+  Flutter:
+    :path: Flutter
+  integration_test:
+    :path: ".symlinks/plugins/integration_test/ios"
+
+SPEC CHECKSUMS:
+  card_management_sdk: c2cbac036ea4f81c1f30cebb267ade5e2496f6bf
+  Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
+  integration_test: 4a889634ef21a45d28d50d622cf412dc6d9f586e
+  NICardManagementSDK: 4867a1a36c91b8d6942cda998292074aadc91a32
+
+PODFILE CHECKSUM: ce2a4dd764e1c7aeed6a7cdc5e61d092b6dc6d32
+
+COCOAPODS: 1.16.2

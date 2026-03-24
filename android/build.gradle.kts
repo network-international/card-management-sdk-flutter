@@ -18,10 +18,10 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        maven { url = uri("https://jitpack.io") }
     }
 }
-// avoid versions here as they are defined in the buildscript dependencies block of root project
-// also versions defined here will be ignored by the pluginManagement block in settings.gradle.kts
+
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android") // id("kotlin-android")
@@ -72,6 +72,8 @@ android {
 }
 
 dependencies {
+    implementation("com.github.network-international:card-management-sdk-android:2.2.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     testImplementation("org.mockito:mockito-core:5.0.0")
 }
