@@ -23,7 +23,34 @@ abstract class CardManagementSdkPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<String?> getPlatformVersion() {
-    throw UnimplementedError('platformVersion() has not been implemented.');
+  Future<void> initialize({
+    required String token,
+    required String rootUrl,
+    required String bankCode,
+    required String cardIdentifierId,
+    required String cardIdentifierType,
+  }) {
+    throw UnimplementedError('initialize() has not been implemented.');
+  }
+
+  Future<Map<String, dynamic>?> getCardDetails() {
+    throw UnimplementedError('getCardDetails() has not been implemented.');
+  }
+
+  Future<Map<String, dynamic>?> setPin(String pin) {
+    throw UnimplementedError('setPin() has not been implemented.');
+  }
+
+  Future<Map<String, dynamic>?> verifyPin(String pin) {
+    throw UnimplementedError('verifyPin() has not been implemented.');
+  }
+
+  Future<Map<String, dynamic>?> changePin(String oldPin, String newPin) {
+    throw UnimplementedError('changePin() has not been implemented.');
+  }
+
+  Future<String?> getPin() {
+    throw UnimplementedError('getPin() has not been implemented.');
   }
 }
+
