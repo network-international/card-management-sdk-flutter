@@ -13,7 +13,7 @@ The Network International Card Management SDK Flutter Plugin allows you to integ
 
 ## Supported Platforms
 
-- **Android** API level 23+
+- **Android** API level 24+
 - **iOS** 15.0+
 - **Flutter** 3.3.0 or higher
 - **Dart** 3.11.1 or higher
