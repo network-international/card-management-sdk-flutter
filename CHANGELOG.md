@@ -1,3 +1,7 @@
+## 0.1.1
+
+* Fixed iOS deployment target documentation: corrected minimum to 15.0 (was incorrectly stated as 12.0).
+
 ## 0.1.0
 
 * First public release of the Flutter plugin.

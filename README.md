@@ -208,7 +208,7 @@ If minification is disabled, these rules are not required.
 
 ### Platform Requirements
 
-- **iOS Deployment Target**: 12.0 or higher
+- **iOS Deployment Target**: 15.0 or higher
 - **Swift Version**: 5.0+
 - **CocoaPods**: Required for dependency management
 
@@ -219,7 +219,7 @@ The plugin is automatically registered in your Flutter app. No additional platfo
 Ensure your `ios/Podfile` includes the correct minimum platform version:
 
 ```ruby
-platform :ios, '12.0'
+platform :ios, '15.0'
 ```
 
 ### Privacy Manifest
@@ -251,7 +251,7 @@ This plugin includes a privacy manifest (`PrivacyInfo.xcprivacy`) to comply with
 **Solution**:
 - Update CocoaPods: `pod repo update`
 - Clean and reinstall: `rm -rf ios/Pods ios/Podfile.lock && flutter pub get`
-- Verify iOS deployment target matches Podfile settings (12.0+)
+- Verify iOS deployment target matches Podfile settings (15.0+)
 
 ### Network Errors
 
