@@ -2,15 +2,21 @@
 
 The Network International Card Management SDK Flutter Plugin allows you to integrate with Network International standard APIs for card management. (https://developer.network.ae).
 
-The plugin exposes methods to:
+## Features
 
-- initialize the SDK session
-- fetch card details
-- set a card PIN
-- verify a PIN
-- change a PIN
+- **SDK Initialization**: Initialize the SDK session with authentication and configuration
+- **Card Details**: Fetch comprehensive card information (PAN, expiry, cardholder details, etc.)
+- **PIN Management**: Set, verify, change, and retrieve card PINs securely
+- **Flexible Configuration**: Support for custom network headers and debug logging
+- **Multi-Platform**: Native implementations for both Android and iOS
+- **Type-Safe**: Full Dart typing with proper error handling
 
-The plugin currently provides platform implementations for Android and iOS.
+## Supported Platforms
+
+- **Android** API level 23+
+- **iOS** 15.0+
+- **Flutter** 3.3.0 or higher
+- **Dart** 3.11.1 or higher
 
 ## Installation
 
@@ -121,6 +127,36 @@ Future<Map<String, dynamic>?> changePin(String oldPin, String newPin) async {
 }
 ```
 
+### Get PIN
+
+```dart
+Future<String?> getPin() async {
+	try {
+		final pin = await sdk.getPin();
+		return pin;
+	} catch (e) {
+		// Handle SDK/platform errors in your app flow.
+		rethrow;
+	}
+}
+```
+
+## Error Handling
+
+All methods throw exceptions that should be caught and handled appropriately in your application:
+
+```dart
+try {
+	await sdk.initialize(...);
+} on PlatformException catch (e) {
+	print('Platform error: ${e.code} - ${e.message}');
+	// Handle platform-specific errors
+} catch (e) {
+	print('Unexpected error: $e');
+	// Handle other errors
+}
+```
+
 ## Public API
 
 ```dart
@@ -168,8 +204,101 @@ buildTypes {
 
 If minification is disabled, these rules are not required.
 
+## iOS Integration
+
+### Platform Requirements
+
+- **iOS Deployment Target**: 12.0 or higher
+- **Swift Version**: 5.0+
+- **CocoaPods**: Required for dependency management
+
+### Configuration
+
+The plugin is automatically registered in your Flutter app. No additional platform configuration is required beyond the standard Flutter setup.
+
+Ensure your `ios/Podfile` includes the correct minimum platform version:
+
+```ruby
+platform :ios, '12.0'
+```
+
+### Privacy Manifest
+
+This plugin includes a privacy manifest (`PrivacyInfo.xcprivacy`) to comply with Apple's Privacy Manifest requirements. No additional action is needed unless your app has custom privacy requirements.
+
+## Troubleshooting
+
+### Initialization Failures
+
+**Problem**: `initialize()` throws an error  
+**Solution**:
+- Verify your token is valid and not expired
+- Check that `rootUrl` points to the correct API endpoint for your environment
+- Ensure `bankCode`, `cardIdentifierId`, and `cardIdentifierType` are correctly provided
+- Confirm network connectivity to the backend
+
+### Android: Method Not Found Errors
+
+**Problem**: `MissingMethodException` on Android  
+**Solution**:
+- Verify ProGuard/R8 rules are correctly configured if minification is enabled
+- Clean and rebuild: `flutter clean && flutter pub get && flutter run`
+- Check that `ae.network.nicardmanagementsdk` package is properly resolved
+
+### iOS: Pod Installation Issues
+
+**Problem**: Pod installation fails  
+**Solution**:
+- Update CocoaPods: `pod repo update`
+- Clean and reinstall: `rm -rf ios/Pods ios/Podfile.lock && flutter pub get`
+- Verify iOS deployment target matches Podfile settings (12.0+)
+
+### Network Errors
+
+**Problem**: `SocketException` or connection timeouts  
+**Solution**:
+- Verify app has internet connectivity
+- Check that `rootUrl` is accessible in your network environment
+- Confirm no firewall/proxy is blocking SDK API calls
+- Try with `debugLogToConsole: true` to see detailed logs
+
 ## Notes
 
 - Do not hardcode production tokens or sensitive card data in source code.
-- Ensure no sensitive data (PIN, clear pan, ...) leaked or logged anywhere between app UI layer and the SDK
+- Ensure no sensitive data (PIN, clear PAN, etc.) is logged anywhere between app UI layer and the SDK
+- Always initialize the SDK before calling other methods
+- The SDK is designed for single-session use; create a new instance if you need to switch authentication contexts
+
+## Contributing
+
+We welcome contributions to improve this plugin. To contribute:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+Please ensure:
+- Code follows Dart/Flutter best practices
+- All tests pass: `flutter test`
+- Code is formatted: `dart format .`
+- No linting issues: `flutter analyze`
+
+## Support
+
+For support and questions:
+
+- **Documentation**: See [Network International Developer Portal](https://developer.network.ae)
+- **Issues**: Report issues on [GitHub Issues](https://github.com/network-international/card-management-sdk-flutter/issues)
+- **Email**: Contact Network International support team
+
+## License
+
+This plugin is licensed under the MIT License. See [LICENSE](LICENSE) file for details.
+
+## Copyright
+
+Copyright (c) 2024 Network International
+
 
