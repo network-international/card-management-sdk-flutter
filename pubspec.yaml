@@ -4,7 +4,6 @@ version: 0.1.0
 homepage: https://github.com/network-international/card-management-sdk-flutter
 repository: https://github.com/network-international/card-management-sdk-flutter
 issue_tracker: https://github.com/network-international/card-management-sdk-flutter/issues
-publish_to: 'https://pub.dev'
 
 environment:
   sdk: ^3.11.1
