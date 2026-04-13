@@ -1,5 +1,7 @@
 # Network International Card Management SDK Flutter Plugin
 
+[![pub.dev](https://img.shields.io/pub/v/card_management_sdk.svg)](https://pub.dev/packages/card_management_sdk)
+
 The Network International Card Management SDK Flutter Plugin allows you to integrate with Network International standard APIs for card management. (https://developer.network.ae).
 
 ## Features
@@ -20,11 +22,13 @@ The Network International Card Management SDK Flutter Plugin allows you to integ
 
 ## Installation
 
+The package is available on [pub.dev](https://pub.dev/packages/card_management_sdk).
+
 Add the dependency in your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-	card_management_sdk: ^<latest_version>
+	card_management_sdk: ^0.1.1
 ```
 
 Then install packages:
@@ -46,7 +50,7 @@ final sdk = CardManagementSdk();
 Future<void> configureSdk() async {
 	await sdk.initialize(
 		token: '<access_token>',
-		rootUrl: 'https://<your-api-host>/api/v2/sdk/v2',
+		rootUrl: 'https://<your-api-host>/sdk/v2',
 		bankCode: '<bank_code>',
 		cardIdentifierId: '<card_identifier_id>',
 		cardIdentifierType: '<card_identifier_type>',
