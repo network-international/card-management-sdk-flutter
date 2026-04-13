@@ -1,3 +1,8 @@
+## 0.1.3
+
+* Fixed Android plugin integration to use the native SDK suspend APIs correctly.
+* Updated Android PIN retrieval to call the native `viewPin` API.
+
 ## 0.1.2
 
 * Fixed rootUrl example in README: corrected path from `/api/v2/sdk/v2` to `/sdk/v2`.
