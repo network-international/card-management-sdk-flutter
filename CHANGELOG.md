@@ -1,3 +1,7 @@
+## 0.1.4
+
+* Updated NICardManagementSDK to version 2.1.7
+
 ## 0.1.3
 
 * Fixed Android plugin integration to use the native SDK suspend APIs correctly.

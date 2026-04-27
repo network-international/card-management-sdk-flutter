@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'card_management_sdk'
-  s.version          = '1.0.0'
+  s.version          = '0.1.4'
   s.summary          = 'SDKs to help card issuers to consume our APIs from Flutter applications.'
   s.description      = 'SDKs to help card issuers to consume our APIs from Flutter applications.'
   s.homepage         = 'https://developer.network.global'
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
-  s.dependency 'NICardManagementSDK', '2.1.4'
+  s.dependency 'NICardManagementSDK', '2.1.7'
   s.platform = :ios, '15.0'
 
   # Flutter.framework does not contain a i386 slice.
