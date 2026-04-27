@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'card_management_sdk'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = 'SDKs to help card issuers to consume our APIs from Flutter applications.'
   s.description      = 'SDKs to help card issuers to consume our APIs from Flutter applications.'
   s.homepage         = 'https://developer.network.global'

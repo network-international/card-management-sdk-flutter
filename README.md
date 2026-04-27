@@ -28,7 +28,7 @@ Add the dependency in your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-	card_management_sdk: ^0.1.3
+	card_management_sdk: ^0.1.5
 ```
 
 Then install packages:
@@ -303,6 +303,6 @@ This plugin is licensed under the MIT License. See [LICENSE](LICENSE) file for d
 
 ## Copyright
 
-Copyright (c) 2024 Network International
+Copyright (c) 2026–present Network International
 
 

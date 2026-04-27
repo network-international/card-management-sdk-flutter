@@ -1,5 +1,5 @@
 group = "global.network.card_management_sdk"
-version = "0.1.4"
+version = "0.1.5"
 
 buildscript {
     val kotlinVersion = "2.2.20"
