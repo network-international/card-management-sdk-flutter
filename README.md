@@ -28,7 +28,7 @@ Add the dependency in your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-	card_management_sdk: ^0.1.5
+	card_management_sdk: ^0.1.6
 ```
 
 Then install packages:

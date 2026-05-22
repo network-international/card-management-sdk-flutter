@@ -48,14 +48,14 @@ final pin = await sdk.getPin();
     await _sdk.initialize(
       // use https://api-uat.network.global/v1/tokenkc/generate
       // and generate new token with your clientId/secred credentials
-      token: 'eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICItNzBNYURtTkxYYW1OR294SGFLWjliM0V3TmdvQ1JOOW5HenlSSFZJN3ZjIn0.eyJleHAiOjE3NzYwNzc3OTIsImlhdCI6MTc3NjA3NTk5MiwianRpIjoiYjE0NjkxMWQtNWU0NS00ZmFjLWEzZmMtY2MzMWMwODgwNGFlIiwiaXNzIjoiaHR0cHM6Ly9pZGVudGl0eS1ub25wcm9kLm5ldHdvcmsuZ2xvYmFsL2F1dGgvcmVhbG1zL05JLU5vblByb2QiLCJzdWIiOiI1MjY4Mjc2ZC1iNDIwLTQ2MWYtODQ0Mi1mNTI4ZDYwZjAyMTciLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiI4ZWIyYjQxNS1hMDc4LTQ4YmQtOTUwNC0yZjQxOTU2MDVhNzk4NzAxODEiLCJzY29wZSI6InByb2ZpbGUgZW1haWwgc2Rrc2NvcGUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsInJvdXRlX2lkIjoiQVBJQyIsIlgtUkVHSU9OIjoiIiwicm9sZSI6ImJhbmsiLCJjbGllbnRJZCI6IjhlYjJiNDE1LWEwNzgtNDhiZC05NTA0LTJmNDE5NTYwNWE3OTg3MDE4MSIsIm9yZ19pZCI6Ik5JQyIsImlzUGNpRHNzIjoidHJ1ZSIsIm1pZCI6IiIsInByZWZlcnJlZF91c2VybmFtZSI6InNlcnZpY2UtYWNjb3VudC04ZWIyYjQxNS1hMDc4LTQ4YmQtOTUwNC0yZjQxOTU2MDVhNzk4NzAxODEiLCJjaWZfaWQiOiIiLCJvcmdfY29kZSI6Ijk4MiIsImNhcmRfaWQiOiIifQ.WpKvQMt5RTzOaIiWCHc4yfRv6gS0UiEcLANep8oLdYwLhmaA-vZx5nXYNKeganiiQCnPZ79zVTVxQhNNHPN1IEEVJbegvIc2RBjpHtEnI8yPQ8lsxrmMKzXJVkPGXU3v5HzjzghXlKCERId6Dg6iTYDF9JGj0mqmc7l3N88YTrSfZtegocJ7Z_6cu60OU02aImQFEwb1hB4jt43qk7a1dKT3uqWNBCoAbuCcwhG2SffJDXvvRfOioGEIIOuUkyW4EzSvZH9vwDeIDapDsFNo1G_wsSU63jUPMudC1qoLZw_PQxEjSge5V-9qGkg6Xp-OgMHAlcwzMjuoWQMnfONqoA',
+      token: 'TOKEN',
       // place url for your FI and region and environment (prod/uat) - from APIGEE
       // https://api-uat.network.global/sdk/v2
-      rootUrl: 'https://apicenter-uat.network.global/api/v2/sdk/v2',
+      rootUrl: 'https://<host>/sdk/v2',
       // your FI
-      bankCode: 'NIC',
+      bankCode: 'FI',
       // card should be active in both - way4 and b24
-      cardIdentifierId: '99985101178224453239',
+      cardIdentifierId: '1234566',
       cardIdentifierType: 'EXID',
       debugLogToConsole: true, // false
       extraNetworkHeaders: {"custom_header": "Additional value"}, // null

@@ -1,11 +1,11 @@
 PODS:
-  - card_management_sdk (1.0.0):
+  - card_management_sdk (0.1.5):
     - Flutter
-    - NICardManagementSDK (= 2.1.4)
+    - NICardManagementSDK (= 2.1.7)
   - Flutter (1.0.0)
   - integration_test (0.0.1):
     - Flutter
-  - NICardManagementSDK (2.1.4)
+  - NICardManagementSDK (2.1.7)
 
 DEPENDENCIES:
   - card_management_sdk (from `.symlinks/plugins/card_management_sdk/ios`)
@@ -25,10 +25,10 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/integration_test/ios"
 
 SPEC CHECKSUMS:
-  card_management_sdk: 668e92592aa2d87a9b55369f8c8efffef53f3e3a
+  card_management_sdk: 4f0c78aaa675d525354448becaa739f68cd2eff9
   Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
   integration_test: 4a889634ef21a45d28d50d622cf412dc6d9f586e
-  NICardManagementSDK: 4867a1a36c91b8d6942cda998292074aadc91a32
+  NICardManagementSDK: c8f099f09ca9c125e7a54f2e74de468ad9087cfd
 
 PODFILE CHECKSUM: ce2a4dd764e1c7aeed6a7cdc5e61d092b6dc6d32
 

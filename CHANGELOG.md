@@ -1,3 +1,7 @@
+## 0.1.6
+
+* Remove obsolete data from example
+
 ## 0.1.5
 
 * Updated dependencies, example, readme
