@@ -1,5 +1,5 @@
 group = "global.network.card_management_sdk"
-version = "0.1.6"
+version = "0.2.0"
 
 buildscript {
     val kotlinVersion = "2.2.20"
@@ -72,7 +72,8 @@ android {
 }
 
 dependencies {
-    implementation("com.github.network-international:card-management-sdk-android:2.2.1")
+    // Programmatic Core only (plugin owns Flutter UI).
+    implementation("ae.network:ni-card-management-sdk-core:0.1.1")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     testImplementation("org.mockito:mockito-core:5.0.0")

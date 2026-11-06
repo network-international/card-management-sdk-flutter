@@ -1,6 +1,6 @@
 import Flutter
 import UIKit
-import NICardManagementSDK
+import NICardManagementSDKCore
 
 public class CardManagementSdkPlugin: NSObject, FlutterPlugin {
     public static func register(with registrar: FlutterPluginRegistrar) {

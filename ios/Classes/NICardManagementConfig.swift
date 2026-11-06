@@ -1,4 +1,4 @@
-import NICardManagementSDK
+import NICardManagementSDKCore
 
 class NICardManagementConfig {
     static let shared = NICardManagementConfig()

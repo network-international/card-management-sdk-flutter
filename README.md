@@ -28,8 +28,10 @@ Add the dependency in your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-	card_management_sdk: ^0.1.6
+	card_management_sdk: ^0.2.0
 ```
+
+This plugin uses **Core** `0.1.1` on Android/iOS (not the native UI SDKs). Native façade docs: [Core README](https://github.com/network-international/card-management-sdk-core).
 
 Then install packages:
 
@@ -72,7 +74,10 @@ Future<void> configureSdk() async {
 - `debugLogToConsole`: Optional; enables SDK debug logs in console.
 - `extraNetworkHeaders`: Optional; extra headers to attach to network calls.
 
-## Usage Examples
+## API usage (no Flutter UI widgets)
+
+Dart methods below are this plugin’s API. Underlying native ops are Core — see [Core README](https://github.com/network-international/card-management-sdk-core).
+
 
 Check `example` directory for impmemenattion details.
 

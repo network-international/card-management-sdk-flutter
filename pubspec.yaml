@@ -1,6 +1,6 @@
 name: card_management_sdk
 description: "Flutter plugin for Network International card management flows, including card details and PIN operations on Android and iOS."
-version: 0.1.6
+version: 0.2.0
 homepage: https://github.com/network-international/card-management-sdk-flutter
 repository: https://github.com/network-international/card-management-sdk-flutter
 issue_tracker: https://github.com/network-international/card-management-sdk-flutter/issues
